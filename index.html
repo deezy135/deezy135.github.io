@@ -63,6 +63,45 @@
             gap: 1rem;
             flex-wrap: wrap;
         }
+
+        .btn-primary {
+            border: 2px solid transparent;
+            background: var(--green);
+            color: white;
+            padding: 0.7rem 1.4rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: #2f7d66;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -83,10 +122,10 @@
 <section class="clinic-gallery container">
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/klinik.jpg" alt="Klinik bild 2"></div>
-            <div class="swiper-slide"><img src="images/_Z8A3hn169.jpg" alt="Klinik bild 1"></div>
-            <div class="swiper-slide"><img src="images/jgmfm.jpg" alt="Klinik bild 5"></div>
-            <div class="swiper-slide"><img src="images/4093232620_w1280_h640_oboi-pod-beton.jpg" alt="Klinik bild 5"></div>
+            <div class="swiper-slide"><img src="images/klinik.jpg" alt="Klinik bild 1"></div>
+            <div class="swiper-slide"><img src="images/Z8A3hn169.jpg" alt="Klinik bild 2"></div>
+            <div class="swiper-slide"><img src="images/jgmfm.jpg" alt="Klinik bild 3"></div>
+            <div class="swiper-slide"><img src="images/4093232620_w1280_h640_oboi-pod-beton.jpg" alt="Klinik bild 4"></div>
             <div class="swiper-slide"><img src="images/pexels-pavel-danilyuk-6753175.jpg" alt="Klinik bild 5"></div>
         </div>
     </div>
