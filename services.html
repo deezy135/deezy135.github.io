@@ -4,33 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Behandlingar - Fenix Manuell Terapi</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--green);
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .service-card h2 {
+            color: var(--green);
+            margin-top: 0;
+        }
+        .service-intro {
+            font-weight: bold;
+            color: var(--text-dark);
+            margin: 0.5rem 0 1rem;
+        }
+        @media (max-width: 768px) {
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header class="topbar">
     <div class="container">
-        <div class="logo">FENIX MANUELL TERAPI</div>
+        <div class="logo"><a href="index.html">Fenix Manuell Terapi</a></div>
         <nav>
-            <a href="index.html">HEM</a>
-            <a href="services.html" class="active">BEHANDLINGAR</a>
-            <a href="produkter.html">PRODUKTER</a>
-            <a href="about.html">OM TERAPEUTEN</a>
-            <a href="bokning.html">BOKNING</a>
-            <a href="contact.html">KONTAKT</a>
+            <a href="services.html" class="hover-underline active">Behandlingar</a>
+            <a href="produkter.html" class="hover-underline">Produkter</a>
+            <a href="about.html" class="hover-underline">Om Terapeuten</a>
+            <a href="https://www.bokadirekt.se/places/fenix-manuell-terapi-27024" class="hover-underline btn-nav">Bokning</a>
         </nav>
     </div>
 </header>
 
 <main class="container">
-    <h1>Våra Behandlingar</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex vel enim gravida, a pellentesque lacus consequat. Integer luctus, erat sit amet laoreet laoreet, purus felis malesuada mauris, in scelerisque augue sem eu risus.</p>
-    <p>Aliquam erat volutpat. Ut sed dolor in libero sollicitudin iaculis. Nam blandit augue id purus luctus, at scelerisque arcu iaculis.</p>
+    <h1 class="page-title">Våra Behandlingar</h1>
+    <div class="service-list">
+        <div class="service-card">
+            <h2>Lära mig massage</h2>
+            <p class="service-intro">Praktisk lektion i Norrköping där du lär dig avslappnande massage hemma för nära och kära.</p>
+            <p>Lektionen utförs i kliniken. Ta med dig någon som kan hjälpa dig att utöva massage under den praktiska delen. Olja, handdukar och annat finns i kliniken.</p>
+            <p>Två timmars lektion: 15 min introduktion, sedan lär du dig enkel massage och praktiserar 60 min på din modell. 200 kr rabatt vid återbokning.</p>
+        </div>
+        <div class="service-card">
+            <h2>Svensk klassisk helkroppsmassage</h2>
+            <p class="service-intro">En avkopplande massage som mjukar upp muskler och bindväv.</p>
+            <p>Arbetar stegvis mot återhämtning och avslappning. Perfekt för att minska spänningar och öka välmåendet.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Besvärsterapi</h2>
+            <p class="service-intro">För långvariga muskel- och ledbesvär som inte svarar på vanlig behandling.</p>
+            <p>Kombinerar triggerpunktsterapi, osteopatiska tekniker och fysioterapeutiska apparater som medicinsk laser, radiofrekvens, vakuum och TENS.</p>
+        </div>
+        <div class="service-card">
+            <h2>Käkage (behandling mot migränsymtom)</h2>
+            <p class="service-intro">Egenutvecklad metod för att minska migränsymtom och käkproblem.</p>
+            <p>Inkluderar manuella tekniker, fysioterapi och intraoral behandling. Avslutas med individuella käkövningar och rekommendationer.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Behandling mot huvudvärk</h2>
+            <p class="service-intro">Effektiv metod mot huvudvärk, trötthet och spänningar.</p>
+            <p>Baserad på medicinsk utbildning och inkluderar manuella tekniker samt modern apparatur för bästa resultat.</p>
+        </div>
+        <div class="service-card">
+            <h2>Behandling mot stress/trötthet</h2>
+            <p class="service-intro">Avslappnande behandling av nacke, axlar och huvud.</p>
+            <p>Hjälper till att återställa motivation och lindra stress med manuella tekniker och fysioterapi.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Behandling vid tinnitus</h2>
+            <p class="service-intro">Lindring av tinnitus och dess följdproblem.</p>
+            <p>Använder manuella och tekniska metoder för att minska ljud i öronen och förbättra livskvaliteten.</p>
+        </div>
+        <div class="service-card">
+            <h2>Andningsbesvär (pollenallergi, astma, KOL, ångest)</h2>
+            <p class="service-intro">Behandling och lindring av andningsrelaterade problem.</p>
+            <p>Inkluderar mätningar, medicinsk massage, apparatur, andningstekniker och hemövningar.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Medicinsk laser</h2>
+            <p class="service-intro">Smärtlindrande och läkande behandling vid akuta och kroniska tillstånd.</p>
+            <p>Används vid skador, inflammationer, artros, sår och mer. Kräver oftast 5 behandlingar för bästa resultat.</p>
+        </div>
+        <div class="service-card">
+            <h2>Gravidmassage terapeutisk</h2>
+            <p class="service-intro">Massage anpassad för gravida från vecka 14.</p>
+            <p>Hjälper mot svullna ben, rygg- och nackvärk, samt främjar blod- och lymfcirkulationen.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Konsultation med kroppsundersökning</h2>
+            <p class="service-intro">Analys av möjliga orsaker till ditt besvär.</p>
+            <p>Utförs i kliniken med olika undersökningstekniker. Ersätter inte läkarbesök.</p>
+        </div>
+        <div class="service-card">
+            <h2>Online konsultation</h2>
+            <p class="service-intro">Rådgivning via internet oavsett var du befinner dig.</p>
+            <p>Diskussion om besvär och möjliga behandlingsmetoder. Betalas i förväg via Swish.</p>
+        </div>
+    </div>
 </main>
 
-<footer>
-    <div class="container">
-        &copy; 2025 - Fenix Manuell Terapi Norrköping Sweden
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-col contact-info">
+            <h3>Kontakt</h3>
+            <p>E-post: doctor-1972@hotmail.com</p>
+            <p>Telefon: 0702436753</p>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/fenixmanuellterapi" class="social-links" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook icon">
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/dr.nomigraine" class="social-links" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                    Instagram
+                </a>
+            </div>
+        </div>
+        <div class="footer-col address">
+            <h3>Adress</h3>
+            <p>Rågången 71 60208 Norrköping, Sweden</p>
+        </div>
+        <div class="footer-col copyright">
+            <p>Foto: natashaphotography.se</p>
+            <p>&copy; 2025 Fenix Manuell Terapi. Alla rättigheter förbehållna.</p>
+        </div>
     </div>
 </footer>
 

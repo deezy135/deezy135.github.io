@@ -4,33 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Terapeuten - Fenix Manuell Terapi</title>
+    <link rel="icon" href="icons/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f0f8f5, #e6f3ef);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .about-text h1 {
+            color: var(--green);
+            margin-bottom: 1rem;
+        }
+        .qualifications {
+            background: #ffffff;
+            border-left: 4px solid var(--green);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .qualifications h2 {
+            color: var(--green);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .qualifications ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .qualifications li {
+            margin-bottom: 0.4rem;
+            line-height: 1.5;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .qualifications li::before {
+            content: "•";
+            color: var(--green);
+            position: absolute;
+            left: 0;
+        }
+        .about-text p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .about-photo img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .about-photo img {
+                max-width: 300px;
+                margin: auto;
+            }
+            .qualifications ul {
+                text-align: left;
+                display: inline-block;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header class="topbar">
     <div class="container">
-        <div class="logo">FENIX MANUELL TERAPI</div>
+        <div class="logo"><a href="index.html">Fenix Manuell Terapi</a></div>
         <nav>
-            <a href="index.html">HEM</a>
-            <a href="services.html">BEHANDLINGAR</a>
-            <a href="produkter.html">PRODUKTER</a>
-            <a href="about.html" class="active">OM TERAPEUTEN</a>
-            <a href="bokning.html">BOKNING</a>
-            <a href="contact.html">KONTAKT</a>
+            <a href="services.html" class="hover-underline">Behandlingar</a>
+            <a href="produkter.html" class="hover-underline">Produkter</a>
+            <a href="about.html" class="hover-underline active">Om Terapeuten</a>
+            <a href="https://www.bokadirekt.se/places/fenix-manuell-terapi-27024" class="hover-underline btn-nav">Bokning</a>
         </nav>
     </div>
 </header>
 
 <main class="container">
-    <h1>Om Terapeuten</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut porta sapien, vitae tempor odio. Vivamus vehicula sapien eu urna pharetra, nec suscipit sapien luctus.</p>
-    <p>Fusce rhoncus enim ac eros varius, sit amet tincidunt massa bibendum.</p>
+    <div class="about-section">
+        <div class="about-photo">
+            <img src="images/about.jpg" alt="Foto av Dr. Zlata Skog">
+        </div>
+        <div class="about-text">
+            <h1>Om Terapeuten</h1>
+
+            <div class="qualifications">
+                <h2>Kvalifikationer</h2>
+                <ul>
+                    <li>Br.cert. manuell terapeut</li>
+                    <li>Br.cert. medicinsk laser terapeut i Sverige</li>
+                    <li>Leg. läkare i Ukraina</li>
+                </ul>
+            </div>
+
+            <p>Med lång erfarenhet inom både traditionell och modern manuell terapi arbetar Dr. Zlata Skog med att lindra smärta, förbättra rörlighet och öka livskvaliteten för sina patienter. Hennes arbetssätt bygger på en kombination av vetenskapligt beprövade metoder och en personlig, lyhörd behandling.</p>
+            <p>Hon erbjuder skräddarsydda behandlingsplaner för allt från spänningshuvudvärk och käkproblem till rygg-, nack- och ledbesvär. I sitt arbete använder hon bland annat avancerade manuella tekniker och fysioterapeutisk apparatur för att uppnå bästa möjliga resultat.</p>
+            <p>Dr. Zlata brinner för att hjälpa varje patient att nå sina mål och återfå ett liv utan smärta - på ett naturligt och hållbart sätt.</p>
+        </div>
+    </div>
 </main>
 
-<footer>
-    <div class="container">
-        &copy; 2025 - Fenix Manuell Terapi Norrköping Sweden
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-col contact-info">
+            <h3>Kontakt</h3>
+            <p>E-post: doctor-1972@hotmail.com</p>
+            <p>Telefon: 0702436753</p>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/fenixmanuellterapi" class="social-links" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook icon">
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/dr.nomigraine" class="social-links" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                    Instagram
+                </a>
+            </div>
+        </div>
+        <div class="footer-col address">
+            <h3>Adress</h3>
+            <p>Rågången 71 60208 Norrköping, Sweden</p>
+        </div>
+        <div class="footer-col copyright">
+            <p>Foto: natashaphotography.se</p>
+            <p>&copy; 2025 Fenix Manuell Terapi. Alla rättigheter förbehållna.</p>
+        </div>
     </div>
 </footer>
 
