@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
         .clinic-gallery {
-            margin: 3rem auto;
+            margin: 1.5rem auto;
         }
 
         .swiper {
             width: 100%;
-            max-width: 900px;
             border-radius: 8px;
             overflow: hidden;
         }
@@ -39,12 +38,15 @@
             align-items: center;
             gap: 2rem;
             background: linear-gradient(135deg, #f8fdfb, #e8f5f1);
-            padding-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
         }
 
         .hero h1 {
+            margin: 0;
             font-size: 2.2rem;
-            line-height: 1.3;
         }
 
         .hero h1 span {
@@ -134,8 +136,11 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1><span>Lev utan smärta</span> <br> Enkelt och Snabbt med Fenix Manuell Terapi</h1>
-            <p>Certifierad Manuell Terapeut - Professionell behandling som hjälper dig leva utan smärta.</p>
+            <h1><span>Lev utan smärta</span> <br> <i>JAG SÄLJER INTE TJÄNSTER. JAG ERBJUDER ETT HÄRLIGT LIV UTAN BESVÄR</i></h1>
+            <cite>- Dr. Zlata Skog</cite>
+            <p>Med en lång erfarenhet inom både traditionella och moderna tekniker i manuell terapi arbetar Dr. Zlata Skog med att lindra smärta, förbättra rörlighet och öka livskvaliteten för sina patienter. Hennes arbetssätt baseras på en kombination av vetenskapligt beprövade metoder och personliga, lyhörda behandlingar.</p>
+            <p>Dr. Zlata Skog erbjuder skräddarsydda behandlingsplaner för allt från spänningshuvudvärk och käkproblem till rygg-, nack- och ledbesvär. I sitt arbete använder hon bland annat avancerade manuella tekniker och fysioterapeutisk apparatur för att uppnå bästa möjliga resultat.</p>
+            <p>Dr. Zlata Skog brinner för att hjälpa varje patient att nå sina mål och återfå ett liv utan smärta - på ett naturligt och hållbart sätt.</p>
             <div class="hero-buttons">
                 <a href="https://www.bokadirekt.se/places/fenix-manuell-terapi-27024" class="btn-primary">Boka tid</a>
             </div>
@@ -180,7 +185,7 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 10,
     centeredSlides: true,
     autoplay: {
-        delay: 6000,
+        delay: 7500,
         disableOnInteraction: false,
     },
     grabCursor: true
