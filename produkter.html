@@ -8,6 +8,74 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <style>
+        .products-about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .products-about-text h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--green);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .products-about-text h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .products-about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-card img {
+            width: 90%;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .product-logo img {
+            max-width: 250px;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
         .products-section {
             padding: 1.5rem;
             background: white;
@@ -22,42 +90,12 @@
             margin-top: 0;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .product-logo img {
-            max-width: 250px;
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        .product-text h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--green);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-text h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .product-text p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-            color: var(--text-dark);
-        }
-
         @media (max-width: 768px) {
-            .product-grid {
+            .products-about {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -70,87 +108,124 @@
 </head>
 
 <body>
+<header class="topbar">
+    <div class="container">
+        <div class="logo"><a href="index.html">Fenix Manuell Terapi</a></div>
+        <nav>
+            <a href="services.html" class="hover-underline">Behandlingar</a>
+            <a href="produkter.html" class="hover-underline active">Produkter</a>
+            <a href="about.html" class="hover-underline">Om Terapeuten</a>
+            <a href="https://www.bokadirekt.se/places/fenix-manuell-terapi-27024"
+                class="hover-underline btn-nav">Bokning</a>
+        </nav>
+    </div>
+</header>
 
-    <header class="topbar">
-        <div class="container">
-            <div class="logo"><a href="index.html">Fenix Manuell Terapi</a></div>
-            <nav>
-                <a href="services.html" class="hover-underline">Behandlingar</a>
-                <a href="produkter.html" class="hover-underline active">Produkter</a>
-                <a href="about.html" class="hover-underline">Om Terapeuten</a>
-                <a href="https://www.bokadirekt.se/places/fenix-manuell-terapi-27024"
-                    class="hover-underline btn-nav">Bokning</a>
-            </nav>
+<main class="container">
+<h1 class="page-title">Våra Produkter</h1>
+<section class="products-section">
+    <h3>Du kan köpa i kliniken naturbaserade produkter vid:</h3>
+    <div class="item-list">
+        <ul>
+            <li>smärta/spänning i muskler, leder</li>
+            <li>åderbråck</li>
+            <li>eksem</li>
+            <li>diabetisk fot</li>
+            <li>lymfdränage stimulerande gel</li>
+            <li>skada: blåmärke, efter stukning, inflammation, svullnad/ödem</li>
+        </ul>
+    </div>
+</section>
+
+<section class="products-grid">
+    <div class="product-card">
+        <img src="images/leder.png" alt="leder">
+        <h3>LUNA Leder massage gel</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/diabetes.jpg" alt="diabetes">
+        <h3>LUNA Diabetes fotkräm</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/keringes.png" alt="keringes">
+        <h3>Cirkulationsoptimerande emulgerande gel</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/ekcema.webp" alt="ekcema">
+        <h3>Eksem lipokräm</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/fekete.png" alt="fekete">
+        <h3>Svart nattskada gel</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/reuma.webp" alt="reuma">
+        <h3>Reuma gel</h3>
+    </div>
+    <div class="product-card">
+        <img src="images/visszer.jpg" alt="visszer">
+        <h3>Luna Åderbråcks kräm</h3>
+    </div>
+</section>
+
+<section class="products-section products-about">
+    <div class="product-logo">
+        <img src="images/drkelen.png" alt="Fenix produkter">
+    </div>
+    <div class="products-about-text">
+        <h2>Dr.Kelen - kvalitet och omtanke</h2>
+        <h3>Noggrant utvalda för din hälsa och välbefinnande</h3>
+        <p>
+            Våra produkter är framtagna med omsorg och baseras på naturliga ingredienser
+            kombinerat med modern forskning. Syftet är att bidra till långsiktigt välmående,
+            smärtlindring och ökad livskvalitet.
+        </p>
+        <p>
+            Vi erbjuder bland annat terapeutiska salvor, oljor och medicinska hjälpmedel
+            som används både i kliniken och rekommenderas för egenvård. Samtliga produkter
+            är noga testade och fria från onödiga tillsatser, för att du ska känna dig trygg
+            i ditt val av behandling.
+        </p>
+        <p>
+            Dr.Kelen är företaget som drivs av fyra generationer av apotekare och läkare som bevarar arvet i
+            Dr.Kelen-familjen. <br>
+            Dr.Kelens produkter ger hälsofrihet till alla, genom att förena natur och vetenskap. <br>
+            Dr.Kelens produkter framställs med naturliga ingredienser och är baserad på vetenskapliga
+            läkemedelsmetoder. <br>
+            Vi garanterar att produkter Dr. Kelen bidrar till god hälsa och vård, samt att förebygga på
+            längre sikt!
+        </p>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-col contact-info">
+            <h3>Kontakt</h3>
+            <p>E-post: doctor-1972@hotmail.com</p>
+            <p>Telefon: 0702436753</p>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/fenixmanuellterapi" class="social-links" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook icon">
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/dr.nomigraine" class="social-links" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram icon">
+                    Instagram
+                </a>
+            </div>
         </div>
-    </header>
-
-    <main class="container">
-        <h1 class="page-title">Våra Produkter</h1>
-        <div class="products-section">
-            <h3>Du kan köpa i kliniken naturbaserade produkter vid:</h3>
-            <div class="item-list">
-                <ul>
-                    <li>smärta/spänning i muskler, leder</li>
-                    <li>åderbråck</li>
-                    <li>eksem</li>
-                    <li>diabetisk fot</li>
-                    <li>lymfdränage stimulerande gel</li>
-                    <li>skada: blåmärke, efter stukning, inflammation, svullnad/ödem</li>
-                </ul>
-            </div>
+        <div class="footer-col address">
+            <h3>Adress</h3>
+            <p>Rågången 71 60208 Norrköping, Sweden</p>
         </div>
-        <section class="product-intro products-section">
-            <div class="product-grid">
-                <div class="product-logo">
-                    <img src="images/drkelen.png" alt="Fenix produkter">
-                </div>
-                <div class="product-text">
-                    <h2>Dr.Kelen - kvalitet och omtanke</h2>
-                    <h3>Noggrant utvalda för din hälsa och välbefinnande</h3>
-                    <p>
-                        Våra produkter är framtagna med omsorg och baseras på naturliga ingredienser
-                        kombinerat med modern forskning. Syftet är att bidra till långsiktigt välmående,
-                        smärtlindring och ökad livskvalitet.
-                    </p>
-                    <p>
-                        Vi erbjuder bland annat terapeutiska salvor, oljor och medicinska hjälpmedel
-                        som används både i kliniken och rekommenderas för egenvård. Samtliga produkter
-                        är noga testade och fria från onödiga tillsatser, för att du ska känna dig trygg
-                        i ditt val av behandling.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-col contact-info">
-                <h3>Kontakt</h3>
-                <p>E-post: doctor-1972@hotmail.com</p>
-                <p>Telefon: 0702436753</p>
-                <div class="social-links-container">
-                    <a href="https://www.facebook.com/fenixmanuellterapi" class="social-links" target="_blank">
-                        <img src="images/facebook.png" alt="Facebook icon">
-                        Facebook
-                    </a>
-                    <a href="https://www.instagram.com/dr.nomigraine" class="social-links" target="_blank">
-                        <img src="images/instagram.png" alt="Instagram icon">
-                        Instagram
-                    </a>
-                </div>
-            </div>
-            <div class="footer-col address">
-                <h3>Adress</h3>
-                <p>Rågången 71 60208 Norrköping, Sweden</p>
-            </div>
-            <div class="footer-col copyright">
-                <p>Foto: natashaphotography.se</p>
-                <p>&copy; 2025 Fenix Manuell Terapi. Alla rättigheter förbehållna.</p>
-            </div>
+        <div class="footer-col copyright">
+            <p>Foto: natashaphotography.se</p>
+            <p>&copy; 2025 Fenix Manuell Terapi. Alla rättigheter förbehållna.</p>
         </div>
-    </footer>
-
+    </div>
+</footer>
 </body>
 
 </html>
